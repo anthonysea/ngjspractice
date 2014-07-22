@@ -1,0 +1,1 @@
+Repository to practice with Angular JS apps
