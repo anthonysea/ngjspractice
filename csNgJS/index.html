@@ -1,9 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="store">
 	<head>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<title>swing on me first</title>
 	</head>
-	<body>
+	<body ng-controller="StoreController as store">
+
+		<div class="container">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="product in store.products">
+				<h3>
+					{{product.name}}
+					<em class="pull-right">{{product.price | currency}}</em>
+				</h3>
+			</li>
+		</ul>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
